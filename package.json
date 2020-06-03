@@ -2,7 +2,6 @@
     "private": true,
     "devDependencies": {
         "cross-env": "^7.0",
-        "laravel-mix": "^5.0.1",
         "lodash": "^4.17.13",
         "vue": "^2.6.11",
         "vue-template-compiler": "^2.6.11"
