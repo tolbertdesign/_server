@@ -7,8 +7,8 @@
     <title>Playground</title>
     <meta property="og:title" content="Booster Test Title" />
     <meta property="og:description" content="Booster Test Description" />
-    <meta property="og:url" content="Booster Test Description" />
-    <meta property="og:url" content="http:/victortolbert.com/blah" />
+    <meta property="og:site_name" content="http://victortolbert.com/blah" />
+    <meta property="og:url" content="http://victortolbert.com/blah" />
     <meta property="og:image" content="http://cominex.net/assets/booster/img/logo/booster_stacked.png" />
 </head>
 <body>
