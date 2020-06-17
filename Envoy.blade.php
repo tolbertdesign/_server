@@ -1,8 +1,8 @@
 @setup
 $repo = 'https://github.com/tolbertdesign/_server';
 $branch = $branch ?? 'develop';
-$remote = $remote ?? 'floral-morning';
-$site = 'victortolbert.com';
+$remote = $remote ?? 'gentle-breeze';
+$site = 'tolbert.design';
 $release_dir = '/home/forge/releases/' . $site;
 $app_dir = '/home/forge/' . $site;
 $release = 'release_' . date('Y-md-Hi-s');
@@ -70,4 +70,6 @@ ln -nfs ../../logs logs;
 chgrp -h www-data logs;
 
 sudo -S service php7.3-fpm reload;
+
+php artisan queue:restart
 @endtask
