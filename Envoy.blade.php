@@ -69,7 +69,7 @@ cd {{ $release_dir }}/{{ $release }}/storage;
 ln -nfs ../../logs logs;
 chgrp -h www-data logs;
 
-sudo -S service php7.3-fpm reload;
+sudo -S service php7.4-fpm reload;
 
 php artisan queue:restart
 @endtask
