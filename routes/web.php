@@ -30,9 +30,17 @@ Route::get('/about', function () {
     ]);
 });
 
+// Route::get('/', function () {
+//     return view('index2');
+// });
+
+// Route::get('/{any}', 'SpaController@index')->where('any', '^(?!api).*$');
+
 Route::get('/', function () {
-    return view('index2');
+    return view('welcome');
 });
 
+Auth::routes();
 
-Route::get('/{any}', 'SpaController@index')->where('any', '^(?!api).*$');
+Route::get('/home', 'HomeController@index')->name('home');
+
