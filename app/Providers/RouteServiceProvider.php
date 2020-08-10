@@ -79,5 +79,8 @@ class RouteServiceProvider extends ServiceProvider
                ->group(base_path('routes/api.php'));
 
         $router->sesFeedback('ses-feedback');
+        $router->mailgunFeedback('mailgun-feedback');
+        $router->postmarkFeedback('postmark-feedback');
+        $router->sendgridFeedback('sendgrid-feedback');
     }
 }

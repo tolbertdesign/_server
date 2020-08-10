@@ -24,8 +24,12 @@
         "livewire/livewire": "^v1.3.2",
         "predis/predis": "dev-master",
         "spatie/laravel-mailcoach": "^2.0.0",
+        "spatie/laravel-mailcoach-mailgun-feedback": "^2.0",
+        "spatie/laravel-mailcoach-postmark-feedback": "^2.0",
+        "spatie/laravel-mailcoach-sendgrid-feedback": "^2.0",
         "spatie/laravel-mailcoach-ses-feedback": "^2.0",
-        "spatie/laravel-translation-loader": "^2.6"
+        "spatie/laravel-translation-loader": "^2.6",
+        "wildbit/swiftmailer-postmark": "^3.1"
     },
     "require-dev": {
         "barryvdh/laravel-debugbar": "^v3.3.3",
