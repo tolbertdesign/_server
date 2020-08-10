@@ -5,6 +5,10 @@ return [
         'configuration_set' => 'mailcoach',
     ],
 
+    'postmark_feedback' => [
+        'signing_secret' => env('POSTMARK_SIGNING_SECRET'),
+    ],
+
     /*
      * The mailer used by Mailcoach for password resets and summary emails.
      * Mailcoach will use the default Laravel mailer if this is not set.

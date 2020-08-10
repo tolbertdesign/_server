@@ -12,6 +12,7 @@
         "aws/aws-sdk-php": "~3.99.4",
         "barryvdh/laravel-translation-manager": "^v0.5.8",
         "blade-ui-kit/blade-icons": "^v0.3.4",
+        "coconutcraig/laravel-postmark": "^2.9",
         "fideloper/proxy": "^4.4.0",
         "fruitcake/laravel-cors": "^v2.0.1",
         "guzzlehttp/guzzle": "^6.5.5",
