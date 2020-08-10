@@ -167,6 +167,8 @@ return [
          */
         Spatie\TranslationLoader\TranslationServiceProvider::class,
         Barryvdh\TranslationManager\ManagerServiceProvider::class,
+        Laravel\Spark\Providers\SparkServiceProvider::class,
+        Laravel\Cashier\CashierServiceProvider::class,
 
         /*
          * Application Service Providers...
@@ -177,6 +179,7 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\HorizonServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
+        App\Providers\SparkServiceProvider::class,
 
     ],
 

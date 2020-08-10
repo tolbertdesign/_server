@@ -192,7 +192,7 @@ return [
                 'processes' => 3,
                 'tries' => 1,
             ],
-        'mailcoach' => [
+            'mailcoach' => [
                 'connection' => 'mailcoach-redis',
                 'queue' => ['send-campaign', 'send-mail', 'mailcoach-feedback', 'mailcoach'],
                 'balance' => 'auto',

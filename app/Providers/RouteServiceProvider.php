@@ -2,8 +2,8 @@
 
 namespace App\Providers;
 
+use Illuminate\Routing\Router;
 use Illuminate\Foundation\Support\Providers\RouteServiceProvider as ServiceProvider;
-use Illuminate\Support\Facades\Route;
 
 class RouteServiceProvider extends ServiceProvider
 {
@@ -38,15 +38,16 @@ class RouteServiceProvider extends ServiceProvider
     /**
      * Define the routes for the application.
      *
+     * @param  \Illuminate\Routing\Router  $router
      * @return void
      */
-    public function map()
+    public function map(Router $router)
     {
-        $this->mapApiRoutes();
+        $this->mapWebRoutes($router);
 
-        $this->mapWebRoutes();
+        $this->mapApiRoutes($router);
 
-        Route::mailcoach('mailcoach');
+        $router->mailcoach('mailcoach');
     }
 
     /**
@@ -54,29 +55,29 @@ class RouteServiceProvider extends ServiceProvider
      *
      * These routes all receive session state, CSRF protection, etc.
      *
+     * @param  \Illuminate\Routing\Router  $router
      * @return void
      */
-    protected function mapWebRoutes()
+    protected function mapWebRoutes(Router $router)
     {
-        Route::middleware('web')
-            ->namespace($this->namespace)
-            ->group(base_path('routes/web.php'));
+        $router->middleware(['web', 'hasTeam'])
+               ->namespace($this->namespace)
+               ->group(base_path('routes/web.php'));
     }
 
     /**
      * Define the "api" routes for the application.
      *
-     * These routes are typically stateless.
-     *
+     * @param  \Illuminate\Routing\Router  $router
      * @return void
      */
-    protected function mapApiRoutes()
+    protected function mapApiRoutes(Router $router)
     {
-        Route::prefix('api')
-            ->middleware('api')
-            ->namespace($this->namespace)
-            ->group(base_path('routes/api.php'));
+        $router->prefix('api')
+               ->middleware('api')
+               ->namespace($this->namespace)
+               ->group(base_path('routes/api.php'));
 
-        Route::sesFeedback('ses-feedback');
+        $router->sesFeedback('ses-feedback');
     }
 }

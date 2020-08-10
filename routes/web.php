@@ -1,46 +1,16 @@
 <?php
 
-use App\Entities\Article;
-use Illuminate\Support\Facades\Route;
-
 /*
 |--------------------------------------------------------------------------
-| Web Routes
+| Application Routes
 |--------------------------------------------------------------------------
 |
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
+| Here is where you can register all of the routes for an application.
+| It's a breeze. Simply tell Laravel the URIs it should respond to
+| and give it the controller to call when that URI is requested.
 |
 */
 
-Route::get('/programs', 'ProgramsController@index');
-Route::get('/programs/{program}', 'ProgramsController@show');
+Route::get('/', 'WelcomeController@show');
 
-Route::get('/articles', 'ArticlesController@index');
-Route::post('/articles', 'ArticlesController@store');
-Route::get('/articles/create', 'ArticlesController@create');
-Route::get('/articles/{article}', 'ArticlesController@show');
-Route::get('/articles/{article}/edit', 'ArticlesController@edit');
-Route::put('/articles/{article}', 'ArticlesController@update');
-
-Route::get('/about', function () {
-    return view('about', [
-        'articles' => Article::take(3)->latest()->get()
-    ]);
-});
-
-// Route::get('/', function () {
-//     return view('index2');
-// });
-
-// Route::get('/{any}', 'SpaController@index')->where('any', '^(?!api).*$');
-
-Route::get('/', function () {
-    return view('welcome');
-});
-
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
-
+Route::get('/home', 'HomeController@show');
