@@ -23,7 +23,7 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        Gate::define('viewMailcoach', function ($user = null) {
+        Gate::define('viewMailcoach', function ($user) {
             // return optional($user)->admin;
             return in_array($user->email, [
                 'victor.tolbert@hey.com',

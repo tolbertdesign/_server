@@ -71,5 +71,6 @@ chgrp -h www-data logs;
 
 sudo -S service php7.4-fpm reload;
 
+cd {{ $release_dir }}/{{ $release }}
 php artisan queue:restart
 @endtask
