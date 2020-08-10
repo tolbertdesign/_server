@@ -2,8 +2,8 @@
 
 namespace App\Providers;
 
+use Illuminate\Support\Facades\Gate;
 use Illuminate\Support\ServiceProvider;
-
 class AppServiceProvider extends ServiceProvider
 {
     /**
@@ -23,6 +23,12 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+        Gate::define('viewMailcoach', function ($user = null) {
+            // return optional($user)->admin;
+            return in_array($user->email, [
+                'victor.tolbert@hey.com',
+                'victor.tolbert@gmail.com',
+            ]);
+        });
     }
 }

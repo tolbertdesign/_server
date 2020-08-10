@@ -3,7 +3,7 @@
 
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>Laravel 7</title>
+    <title>{{ config('app.name', 'Laravel') }}</title>
     <meta name="keywords" content="" />
     <meta name="description" content="" />
     <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900" rel="stylesheet" />
@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.7.2/animate.css">
     <link rel="stylesheet" href="/css/default.css">
     <link rel="stylesheet" href="/css/fonts.css">
+    <link rel="icon" href="/favicon.png">
     <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.1.0/dist/alpine.js" defer></script>
 </head>
 

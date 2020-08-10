@@ -30,10 +30,30 @@ class DatabaseSeeder extends Seeder
         User::truncate();
 
         User::create([
-            'name' => 'Victor',
+            'name' => 'Victor Outlook',
+            'email' => 'victor.tolbert@outlook.com',
+            'password' => Hash::make('password'),
+        ]);
+
+        User::create([
+            'name' => 'Victor Hey',
             'email' => 'victor.tolbert@hey.com',
             'password' => Hash::make('password'),
         ]);
+
+        User::create([
+            'name' => 'Vick Nice',
+            'email' => 'vicknice@gmail.com',
+            'password' => Hash::make('password'),
+        ]);
+
+        User::create([
+            'name' => 'Victor Tolbert',
+            'email' => 'victor.tolbert@gmail.com',
+            'password' => Hash::make('password'),
+        ]);
+
+
 
     }
 }

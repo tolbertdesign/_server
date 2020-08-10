@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Tolbert.Design</title>
+    <link rel="icon" href="/favicon.png">
     <meta property="og:title" content="Tolbert.Design" />
     <meta property="og:description" content="" />
     <meta property="og:site_name" content="https://tolbert.design" />
