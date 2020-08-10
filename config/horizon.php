@@ -184,6 +184,25 @@ return [
 
         ],
 
+        'develop' => [
+            'supervisor-1' => [
+                'connection' => 'redis',
+                'queue' => ['default'],
+                'balance' => 'simple',
+                'processes' => 3,
+                'tries' => 1,
+            ],
+            'mailcoach' => [
+                'connection' => 'mailcoach-redis',
+                'queue' => ['send-campaign', 'send-mail', 'mailcoach-feedback', 'mailcoach'],
+                'balance' => 'auto',
+                'processes' => 3,
+                'tries' => 1,
+                'timeout' => 60 * 60,
+            ],
+
+        ],
+
         'local' => [
             'supervisor-1' => [
                 'connection' => 'redis',
