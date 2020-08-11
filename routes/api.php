@@ -19,26 +19,26 @@ use Illuminate\Support\Facades\Route;
 // });
 
 // Route::post('/login', 'UserController@login');
-Route::post('/login', function (Request $request) {
-    $data = $request->validate([
-        'email' => 'required',
-        'password' => 'required',
-    ]);
-    auth()->attempt($request->only('email', 'password'));
-    return auth()->user();
-});
+// Route::post('/login', function (Request $request) {
+//     $data = $request->validate([
+//         'email' => 'required',
+//         'password' => 'required',
+//     ]);
+//     auth()->attempt($request->only('email', 'password'));
+//     return auth()->user();
+// });
 
 // Route::get('/logout', 'UserController@logout');
-Route::post('/logout', function (Request $request) {
-    auth()->logout();
-    // return response('');
+// Route::post('/logout', function (Request $request) {
+//     auth()->logout();
+//     // return response('');
 
-    $request->session()->invalidate();
-    if ($request->wantsJson()) {
-        return response()->json([], 204);
-    }
-    return redirect('/');
-});
+//     $request->session()->invalidate();
+//     if ($request->wantsJson()) {
+//         return response()->json([], 204);
+//     }
+//     return redirect('/');
+// });
 
 Route::get('/user', function (Request $request) {
     return $request->user();

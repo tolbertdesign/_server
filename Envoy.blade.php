@@ -72,5 +72,11 @@ chgrp -h www-data logs;
 sudo -S service php7.4-fpm reload;
 
 cd {{ $release_dir }}/{{ $release }}
+
+php artisan config:cache
+php artisan route:cache
+php artisan horizon:purge
+php artisan horizon:terminate
 php artisan queue:restart
+php artisan up
 @endtask
