@@ -40,9 +40,9 @@ use Illuminate\Support\Facades\Route;
 //     return redirect('/');
 // });
 
-Route::get('/user', function (Request $request) {
-    return $request->user();
-})->middleware('auth:sanctum');
+// Route::get('/user', function (Request $request) {
+//     return $request->user();
+// })->middleware('auth:sanctum');
 
 Route::get('/books', 'BookController@index');
 // ->middleware('auth:sanctum');
