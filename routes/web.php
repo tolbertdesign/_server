@@ -19,20 +19,9 @@ Route::get('/articles/{article}', 'ArticlesController@show');
 Route::get('/articles/{article}/edit', 'ArticlesController@edit');
 Route::put('/articles/{article}', 'ArticlesController@update');
 
-Route::get('/about', function () {
-    return view('about', [
-        'articles' => Article::take(3)->latest()->get()
-    ]);
-});
-
-Route::get('/new', function () {
-    return view('new');
-});
-
-// Route::get('/', function () {
-//     return view('index');
-// });
-
+Route::get('/dashboard', 'DashboardController@show');
+Route::get('/example', 'ExampleController@show');
+Route::get('/about', 'AboutPageController@show');
 Route::get('/', 'WelcomeController@show');
 
 Route::get('/home', 'HomeController@show');
