@@ -11,7 +11,7 @@
         // window.__INITIAL_STATE__ = "addslashes(json_encode($fields))";
     </script>
     @yield('head')
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@1.2.0/dist/tailwind.css" />
+    <link rel="stylesheet" href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" >
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.7.2/animate.css">
     <link rel="stylesheet" href="/css/default.css">
     <link rel="stylesheet" href="/css/fonts.css">
@@ -23,7 +23,7 @@
     <div id="header-wrapper">
         <div id="header" class="container">
             <div id="logo">
-                <h1><a href="/examples">Examples</a></h1>
+                <h1><a href="/">designcode.net</a></h1>
             </div>
             <div id="menu">
                 <ul>
@@ -40,7 +40,6 @@
     @yield('content')
 
     <div id="copyright" class="container">
-        <p>&copy; Untitled. All rights reserved. | Photos by <a href="siteUrl">siteName</a> | Design by <a href="designerUrl" rel="nofollow">designer</a>.</p>
     </div>
 </body>
 

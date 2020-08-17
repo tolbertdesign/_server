@@ -1,21 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Meta Information -->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
     <title>@yield('title', config('app.name'))</title>
-
-    <!-- Fonts -->
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,600' rel='stylesheet' type='text/css'>
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
 
     <style>
         body, html {
-            background: url('/img/spark-bg.png');
-            background-repeat: repeat;
-            background-size: 300px 200px;
+            /* background: url('/img/atlanta-bg.jpg'); */
+            background: url('/img/over_canvas.jpg');
+            /* background-color: #26241a; */
+            background-repeat: no-repeat;
+            /* background-size: 300px 200px; */
+            background-size: cover;
             height: 100%;
             margin: 0;
         }
@@ -71,22 +70,20 @@
 <body>
     <div class="full-height flex-column">
         <nav class="links">
-            <a href="/login" style="margin-right: 15px;">
-                <button>
-                    {{__('Login')}}
-                </button>
+            <a href="/login" class="text-gray-300 border-b hover:border-blue-300 hover:text-white">
+                {{__('Client Login')}}
             </a>
 
-            <a href="/register">
+            {{-- <a href="/register">
                 <button>
                     {{__('Register')}}
                 </button>
-            </a>
+            </a> --}}
         </nav>
 
         <div class="flex-fill flex-center">
             <h1 class="text-center">
-                <img src="{{ asset('/img/color-logo.png') }}" alt="{{ __('Logo') }}" />
+                <img src="{{ asset('/img/logo-vt-on-dark.png') }}" alt="{{ __('Logo') }}" />
             </h1>
         </div>
     </div>

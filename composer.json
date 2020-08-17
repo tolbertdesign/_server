@@ -24,6 +24,7 @@
         "laravel/ui": "^v2.1.0",
         "livewire/livewire": "^v1.3.2",
         "predis/predis": "dev-master",
+        "spatie/laravel-honeypot": "^2.2",
         "spatie/laravel-mailcoach": "^2.0.0",
         "spatie/laravel-mailcoach-mailgun-feedback": "^2.0",
         "spatie/laravel-mailcoach-postmark-feedback": "^2.0",

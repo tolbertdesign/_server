@@ -10,7 +10,12 @@
                     <div class="card-header">{{__('Dashboard')}}</div>
 
                     <div class="card-body">
-                        {{__('Your application\'s dashboard.')}}
+                        {{-- {{__('Your application\'s dashboard.')}} --}}
+                        <ul>
+                            <li><a href="/horizon">Horizon</a></li>
+                            <li><a href="/mailcoach">Mailcoach</a></li>
+                        </ul>
+
                     </div>
                 </div>
             </div>
