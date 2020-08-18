@@ -78,5 +78,6 @@ php artisan route:cache
 php artisan horizon:purge
 php artisan horizon:terminate
 php artisan queue:restart
-php artisan up
+
+{{ logMessage("php artisan up") }}
 @endtask
