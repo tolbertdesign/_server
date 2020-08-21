@@ -20,10 +20,28 @@ Route::get('/articles/{article}', 'ArticlesController@show');
 Route::get('/articles/{article}/edit', 'ArticlesController@edit');
 Route::put('/articles/{article}', 'ArticlesController@update');
 
-Route::get('/dashboard', 'DashboardController@show');
+Route::get('/dashboard', 'DashboardController@show')->name('dashboard');
 Route::get('/example', 'ExampleController@show');
 Route::get('/about', 'AboutPageController@show');
-Route::get('/', 'WelcomeController@show');
+Route::get('/', 'WelcomeController@show')->name('home');
+
+
+Route::get('/about', function () {
+    return view('dashboard');
+})->name('about');
+
+Route::get('/testimonials', function () {
+    return view('dashboard');
+})->name('testimonials');
+
+Route::get('/contact', function () {
+    return view('dashboard');
+})->name('contact');
+
+Route::get('/contact-team', function () {
+    return view('dashboard');
+});
+
 
 Route::get('/home', 'HomeController@show');
 

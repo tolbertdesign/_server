@@ -34,4 +34,9 @@ return [
         'api_key' => env('SENDGRID_API_KEY'),
     ],
 
+    // config('services.recaptcha.key')
+    'recaptcha' => [
+        'key' => env('RECAPTCHA_KEY'),
+        'secret' => env('RECAPTCHA_SECRET'),
+    ],
 ];

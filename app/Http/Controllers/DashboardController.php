@@ -12,7 +12,7 @@ class DashboardController extends Controller
         $articles = Article::take(3)->latest()->get();
 
         // $somethingYouWantToDebug = new StdClass;
-        tinker($articles);
+        // tinker($articles);
 
         return view('dashboard', ['articles' => $articles]);
     }
