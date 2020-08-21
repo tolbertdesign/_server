@@ -82,7 +82,8 @@
     ],
     "post-update-cmd": [
       "@php artisan vendor:publish --tag mailcoach-assets --force",
-      "@php artisan horizon:publish --ansi"
+      "@php artisan horizon:publish --ansi",
+      "@php artisan nova:publish"
     ]
   },
   "repositories": [
