@@ -22,6 +22,7 @@
     "laravel/nova": "~3.0",
     "laravel/sanctum": "^v2.4.2",
     "laravel/spark-aurelius": "~10.0",
+    "laravel/telescope": "^3.5",
     "laravel/tinker": "v2.4.2",
     "laravel/ui": "^v2.1.0",
     "livewire/livewire": "^v1.3.3",

@@ -1,4 +1,4 @@
-title: Home
+title: Bar
 sections:
   main:
     display: Main
@@ -6,8 +6,9 @@ sections:
       -
         handle: title
         field:
-          character_limit: 0
           type: text
+          required: true
+          character_limit: 0
           localizable: false
           display: Title
       -
@@ -34,3 +35,12 @@ sections:
           type: template
           localizable: false
           display: Template
+  sidebar:
+    display: Sidebar
+    fields:
+      -
+        handle: slug
+        field:
+          type: slug
+          required: true
+          localizable: true

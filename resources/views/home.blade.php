@@ -16,6 +16,8 @@
                                 <li><a href="/horizon">Horizon</a></li>
                                 <li><a href="/mailcoach">Mailcoach</a></li>
                                 <li><a href="/nova">Nova</a></li>
+                                <li><a href="/cp">Control Panel</a></li>
+                                <li><a href="/telescope">Telescope</a></li>
                             </ul>
 
                         </div>
