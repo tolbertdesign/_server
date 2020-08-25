@@ -1,6 +1,7 @@
-let mix = require('laravel-mix');
-let exec = require('child_process').exec;
-let path = require('path');
+const mix = require('laravel-mix');
+const exec = require('child_process').exec;
+const path = require('path');
+require('laravel-mix-purgecss');
 
 /*
  |--------------------------------------------------------------------------
@@ -34,6 +35,19 @@ mix
     });
 
 
+
+mix.js('resources/js/site.js', 'public/js')
+mix.postCss('resources/css/tailwind.css', 'public/css', [
+  require('postcss-import'),
+  require('tailwindcss'),
+  require('postcss-nested'),
+  require('postcss-preset-env')({stage: 0})
+])
+
 if (mix.inProduction()) {
-    mix.version();
+  mix.version();
+  mix.purgeCss({
+    enabled: true,
+    whitelistPatternsChildren: [/^content$/],
+  });
 }
