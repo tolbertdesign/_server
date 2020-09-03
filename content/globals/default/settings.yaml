@@ -1,0 +1,14 @@
+site_name: 'Tolbert Design'
+social:
+  -
+    name: Twitter
+    url: 'https://twitter.com/design_coder'
+    icon: null
+  -
+    name: Github
+    url: 'https://github.com/tolbertdesign'
+    icon: null
+  -
+    name: Email
+    url: 'mailto:victor@tolbert.design'
+    icon: null

@@ -10,7 +10,6 @@
   "require": {
     "php": "^7.4",
     "aws/aws-sdk-php": "~3.99.4",
-    "barryvdh/laravel-translation-manager": "^v0.5.8",
     "blade-ui-kit/blade-icons": "^v0.3.4",
     "calebporzio/awesome-helpers": "^v2.4.5",
     "coconutcraig/laravel-postmark": "^v2.9.0",
@@ -33,14 +32,13 @@
     "spatie/laravel-mailcoach-postmark-feedback": "^2.0",
     "spatie/laravel-mailcoach-sendgrid-feedback": "^2.0",
     "spatie/laravel-mailcoach-ses-feedback": "^2.0",
-    "spatie/laravel-translation-loader": "^2.6.1",
-    "statamic/cms": "^3.0",
     "wildbit/swiftmailer-postmark": "^3.1.0"
   },
   "require-dev": {
     "barryvdh/laravel-debugbar": "v3.4.1",
     "facade/ignition": "^2.3.6",
     "fzaninotto/faker": "^v1.9.1",
+    "laracasts/cypress": "^1.1",
     "mockery/mockery": "^1.4.2",
     "nunomaduro/collision": "^v4.2.0",
     "phpunit/phpunit": "9.3.x-dev"
@@ -74,8 +72,7 @@
   "scripts": {
     "post-autoload-dump": [
       "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",
-      "@php artisan package:discover --ansi",
-      "@php artisan statamic:install --ansi"
+      "@php artisan package:discover --ansi"
     ],
     "post-root-package-install": [
       "@php -r \"file_exists('.env') || copy('.env.example', '.env');\""
